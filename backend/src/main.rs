@@ -54,8 +54,8 @@ async fn get_discovery(
 
 fn tls_paths() -> (PathBuf, PathBuf) {
     let manifest_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-
     let cert_path = std::env::var("SNAPLAN_TLS_CERT")
+
         .map(PathBuf::from)
         .unwrap_or_else(|_| manifest_dir.join("../frontend/192.168.2.5+2.pem"));
 

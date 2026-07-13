@@ -70,13 +70,14 @@ button:disabled {
 
 <br>
 
-<button onclick="createSession()">Create Session (Host)</button>
-<button onclick="startScanner()">Scan QR (Join)</button>
-<button onclick="fetchDiscovery()" id="searchBtn">Search Network</button>
-<button onclick="connectWs()" id="connectBtn" disabled>Connect WebSocket</button>
-<button onclick="ping()" id="pingBtn" disabled>Ping</button>
+<button id="createBtn">Create Session (Host)</button>
+<button id="scanBtn">Scan QR (Join)</button>
+<button id="searchBtn">Search Network</button>
+<button id="connectBtn" disabled>Connect WebSocket</button>
+<button id="pingBtn" disabled>Ping</button>
 <input type="file" id="fileInput" />
-<button onclick="sendFile()">Send File</button>
+<button id="sendBtn">Send File</button>
+
 
 <div id="status">Status: idle</div>
 
@@ -90,13 +91,16 @@ button:disabled {
 <h3>Peers (Connected)</h3>
 <div id="peers"></div>
 
-<h3>Available Devices (Network)</h3>
+<h3>Available Devices (Network)</h3>.   
 <div id="discovered"></div>
 
 <h3>Log</h3>
 <div id="log"></div>
 
-<script src="app.js"></script>
 
+
+
+<script src="js/app.js" type="module"></script>
 </body>
 </html>
+
