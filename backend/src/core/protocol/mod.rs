@@ -2,8 +2,18 @@ pub mod ids;
 pub mod header;
 pub mod packet;
 pub mod discovery;
+pub mod pairing;
+pub mod session;
+pub mod transfer;
+pub mod heartbeat;
+pub mod error;
 
 pub use ids::*;
-pub use header::*
-pub use packet::*
-pub use dicovery::*
+pub use header::*;
+pub use packet::*;
+pub use dicovery::*;
+pub use pairing::*;
+pub use session::*;
+pub use transfer::*;
+pub use heartbeat::*;
+pub use error::*;

@@ -45,8 +45,25 @@ impl SessionId{
     Serialize,
     Deserialize,
 )]
+pub struct TransferId(pub Uuid);
+impl TransferId{
+    pub fn new() -> Self {
+        Self(Uuid::new_v4())
+    }
+}
+
+#[derive(
+    Debug,
+    Clone,
+    Copy,
+    PartialEq,
+    Eq,
+    Hash,
+    Serialize,
+    Deserialize,
+)]
 pub struct PacketId(pub u64);
-impl PacketId{
+impl PacketId {
     pub fn new(id: u64) -> Self {
         Self(id)
     }
